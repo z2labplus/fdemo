@@ -1,1 +1,1 @@
-nohup python web.py >> web.log &
+nohup python web.py &
