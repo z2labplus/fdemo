@@ -1,10 +1,9 @@
-from flask import Flask,request,render_template
-
+from flask import Flask
+import time
 app = Flask(__name__)
-
 @app.route('/')
-def first():
-    return 'welcome to flask'
-
-if __name__=='__main__':
-    app.run(host='0.0.0.0', port=9999, debug=True)
+def hello_world():
+    response = 'Hello World '+time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
+    return response
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0',port=9999)
